@@ -30,7 +30,7 @@ colnames(c_state_5)=x5
 
 #combining the data from NFHS 3,4 and 5 into one dataframe
 nfhs=data.frame(c_state_3,c_state_4,c_state_5)
-
+save(nfhs, file = "nfhs.RData")
 
 
 
