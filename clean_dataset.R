@@ -1,7 +1,5 @@
 #rm(list = ls())
 library(readr)
-library(lattice)
-
 
 #cleaning thee dataset
 state_3 <- read_csv("https://raw.githubusercontent.com/paOne0611/NFHS_Orphans/main/Statewise_Data/Orphanhood_statewise_NFHS_3.csv")
