@@ -5,9 +5,7 @@ library(lattice)
 
 #cleaning thee dataset
 state_3 <- read_csv("https://raw.githubusercontent.com/paOne0611/NFHS_Orphans/main/Statewise_Data/Orphanhood_statewise_NFHS_3.csv")
-
 state_4 <- read_csv("https://raw.githubusercontent.com/paOne0611/NFHS_Orphans/main/Statewise_Data/Orphanhood_statewise_NFHS_4.csv")
-
 state_5 <- read_csv("https://raw.githubusercontent.com/paOne0611/NFHS_Orphans/main/Statewise_Data/Orphanhood_statewise_NFHS_5.csv")
 
 c_state_3=state_3[3:31,]
