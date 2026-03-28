@@ -3,16 +3,25 @@ library(readr)
 
 #cleaning thee dataset
 state_3 <- read_csv("https://raw.githubusercontent.com/paOne0611/NFHS_Orphans/main/Statewise_Data/Orphanhood_statewise_NFHS_3.csv")
+
 state_4 <- read_csv("https://raw.githubusercontent.com/paOne0611/NFHS_Orphans/main/Statewise_Data/Orphanhood_statewise_NFHS_4.csv")
+
 state_5 <- read_csv("https://raw.githubusercontent.com/paOne0611/NFHS_Orphans/main/Statewise_Data/Orphanhood_statewise_NFHS_5.csv")
 
-c_state_3=state_3[3:31,]
-c_state_4=state_4[3:31,]
-c_state_5=state_5[3:31,]
+c_state_3=state_3[3:40,]
+c_state_4=state_4[3:40,]
+c_state_5=state_5[3:40,]
 
+#c_state_3= na.omit(c_state_3)
+#c_state_4= na.omit(c_state_4)
+#c_state_5= na.omit(c_state_5)
+
+#deleting the column, Total 
 c_state_3$Total=NULL
 c_state_4$Total=NULL
 c_state_5$Total=NULL
+
+#keeping the State column of only one DF
 c_state_4$State=NULL
 c_state_5$State=NULL
 
@@ -24,13 +33,12 @@ colnames(c_state_3)=x3
 colnames(c_state_4)=x4
 colnames(c_state_5)=x5
 
+
 ###
 
 #combining the data from NFHS 3,4 and 5 into one dataframe
 nfhs=data.frame(c_state_3,c_state_4,c_state_5)
 save(nfhs, file = "nfhs.RData")
-
-
 
 
 
